@@ -1,1 +1,1 @@
-
+# GPS acqusition block
