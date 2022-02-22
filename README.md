@@ -11,4 +11,12 @@ Procedures are separated into acqutsition, tracking, navigation solution part to
 Simply download the .grc files and open it with gnunradio. The code of embeded python block is also provided. In case of unsuccessful opening, you can create your own flow graph same as the .grc file and copy and paste the python code to embeded python block.
 
 # acqusition block
-![image]https://github.com/Mortarboard-H/GPS-Receiver-SDR-on-GNURadio/blob/main/acqusition/acqusiton%20graph.png
+![image](https://github.com/Mortarboard-H/GPS-Receiver-SDR-on-GNURadio/blob/main/acqusition/acqusiton%20graph.png)
+Two parametes are defined for the application 'samp_rate' and 'vectorLen'. 'samp_rate' defines the sample rate of the source. vectorLen is samp_rate/1e3, referring to the number of samples per code.
+Six blocks are used.
+Source: this grc uses file source, which refers to a gps signal file. It can be replaced by kinds of hardware sources as you like
+Throttle: essential if a file source is used. As explained by official tutorials, this block limits the excuting speed of the whole flow.
+Stream to Vector: convert stream of data to vectors of data.
+GPS Acqusition: this is a 'Embeded Python Block'. Code of this block is provided in epy_block_0.py. refering [embeded python block tutorial](https://wiki.gnuradio.org/index.php?title=Creating_Your_First_Block) for further imformation of this block.
+Vector to stream: convert vectors of data back to stream
+Time Sink: to visialize the data stream
