@@ -9,3 +9,6 @@ Procedures are separated into acqutsition, tracking, navigation solution part to
 
 # How to use
 Simply download the .grc files and open it with gnunradio. The code of embeded python block is also provided. In case of unsuccessful opening, you can create your own flow graph same as the .grc file and copy and paste the python code to embeded python block.
+
+# acqusition block
+![image]https://github.com/Mortarboard-H/GPS-Receiver-SDR-on-GNURadio/blob/main/acqusition/acqusiton%20graph.png
